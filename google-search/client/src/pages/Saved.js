@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
+import DeleteBtn from "../components/DeleteBtn";
+import { List, ListItem } from "../components/List";
 
-class Detail extends Component {
+class Saved extends Component {
   state = {
     book: {}
   };
@@ -48,4 +50,4 @@ class Detail extends Component {
   }
 }
 
-export default Detail;
+export default Saved;
