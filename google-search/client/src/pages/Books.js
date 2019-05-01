@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import SaveBtn from "../components/SaveBtn";
+// import SaveBtn from "../components/SaveBtn";
 import DeleteBtn from "../components/DeleteBtn";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Input, TextArea, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
 
 class Books extends Component {
@@ -27,6 +27,7 @@ class Books extends Component {
       )
       .catch(err => console.log(err));
   };
+
 
   deleteBook = id => {
     API.deleteBook(id)
@@ -58,7 +59,7 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          {/* <Col size="md-6">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
@@ -88,10 +89,10 @@ class Books extends Component {
                 Submit Book
               </FormBtn>
             </form>
-          </Col>
-          <Col size="md-6 sm-12">
+          </Col> */}
+          <Col size="md-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Books</h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>
