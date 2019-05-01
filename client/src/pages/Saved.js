@@ -39,7 +39,6 @@ class Saved extends Component {
               <h1>
                 Saved Books
               </h1>
-              )}
           </Col>
         </Row>
       

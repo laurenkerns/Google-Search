@@ -1,6 +1,14 @@
 import axios from "axios";
 
+///google books API////
+const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
+// const APIKEY = "AIzaSyDCG1uiAEOdEVv0XeaTOfzoHRANn7JxlGs";
+
 export default {
+  //search
+  search: function(query) {
+    return axios.get(BASEURL + query);
+  },
   // Gets all books
   getBooks: function() {
     return axios.get("/api/books");
