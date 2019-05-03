@@ -1,13 +1,15 @@
 import axios from "axios";
 
-///google books API////
-const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
-// const APIKEY = "AIzaSyDCG1uiAEOdEVv0XeaTOfzoHRANn7JxlGs";
+
 
 export default {
   //search
-  search: function(query) {
-    return axios.get(BASEURL + query);
+  search: function(title) {
+    ///google books API////
+    // const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
+    // const APIKEY = "AIzaSyDCG1uiAEOdEVv0XeaTOfzoHRANn7JxlGs";
+    // let q=(query.book).split(" ").join("+")+(query.author).split(" ").join("+");
+    return axios.post("/books", {title: title});
   },
   // Gets all books
   getBooks: function() {

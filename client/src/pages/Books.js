@@ -46,11 +46,12 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+    if (this.state.title) {
+      API.search({
+        book: this.state.book,
+        // title: this.state.title,
+        // author: this.state.author,
+        // synopsis: this.state.synopsis
       })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
